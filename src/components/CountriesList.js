@@ -8,25 +8,20 @@ class CountriesList extends React.Component {
   };
   render() {
     return (
-      <div className="container">
-        <div className="column">
-          {this.state.countries.map((countries) => {
+      <div className="list-group">
+          {this.state.countries.map((country) => {
             return (
-              <div className="col-5" style={{maxHeight: "90vh", overflow: "scroll"}}>
-                <div className="list-group">
-                  <Link
-                    to={`/countries/${countries.cca3}`}
-                    className="btn">
-                    {countries.name.common}
-                  </Link>
-                </div>
-              </div>
+              <Link
+                className="list-group-item list-group-item-action"
+                to={`/${country.cca3}`}
+                key={country.cca3}>
+                {country.flag} {country.name.common}
+              </Link>
             );
           })}
         </div>
-      </div>
-    );
-  }
+      );
+    }
 }
 
 export default CountriesList;

@@ -1,10 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-dark bg-primary">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">WikiCountries</span>
+    <nav className="navbar navbar-dark bg-primary mb-3">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+        WikiCountries
+        </Link>
       </div>
     </nav>
   );
