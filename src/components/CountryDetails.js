@@ -67,11 +67,11 @@ class CountryDetails extends Component {
       <td>Borders</td>
       <td>
       <ul>
-      {}this.state.borders.map((border) => {
+      {this.state.borders.map((bordercca3) => {
         return (
           <li>
-          <Link to={`/${border.cca3}`}>
-          {border.name.common}</Link>
+          <Link to={`/${bordercca3}`}>
+          {this.getBorderCommonName(bordercca3)}</Link>
           </li>
         );
       })}
